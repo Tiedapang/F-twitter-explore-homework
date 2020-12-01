@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixins";
+
+$header-padding-up: 20px;
+$header-padding-left: 40px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $header-padding-up $header-padding-left;
+  border-bottom: 1px $border-color solid;
+}
+.header-logo {
+  text-align: center;
+}
+.header-nav-ul {
+  display: flex;
+  > li {
+    margin-left: 5px;
+  }
+  .header-nav-ul-login-button {
+    @include btn-variant($primary-color, $body-bg);
+  }
+  .header-nav-ul-signin-button {
+    @include btn-variant($white, $primary-color);
+  }
+}
