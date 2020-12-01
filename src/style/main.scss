@@ -1,0 +1,55 @@
+@import "variables";
+@import "mixins";
+
+$header-padding-up: 20px;
+$header-padding-left: 40px;
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px $border-color solid;
+  border-radius: $border-radius-base;
+  margin-top: 100px;
+  padding: $header-padding-up $header-padding-left;
+}
+.main-form-title {
+  color: $white;
+}
+.main-form-input {
+  display: flex;
+  flex-direction: column;
+}
+.main-form-signin-button {
+  @include btn-variant($white, $primary-color);
+  width: 100%;
+}
+.info-input {
+  background-color: $body-bg;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  border: none;
+  border-bottom: 1px $border-color solid;
+  margin: 10px 0;
+}
+.hint {
+  color: $primary-color;
+  text-decoration: none;
+}
+.main-form-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-form-login-button {
+  @include btn-variant($primary-color, $body-bg);
+  width: 100%;
+}
